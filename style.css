@@ -9,6 +9,7 @@ body {
 .text {
     text-align: center;
     justify-content: center;
+    color: #333333;
     padding: 1.875rem;
     font-size: 1.5625rem;
 }
