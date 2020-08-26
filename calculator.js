@@ -1,7 +1,7 @@
-const buttomNumber = document.getElementsByName('data-number');
-const buttomOperation = document.getElementsByName('data-operation');
-const buttomEqual = document.getElementsByName('data-equal');
-const buttomDelete = document.getElementsByName('data-delete');
+const buttonNumber = document.getElementsByName('data-number');
+const buttonOperation = document.getElementsByName('data-operation');
+const buttonEqual = document.getElementsByName('data-equal')[0];
+const buttonDelete = document.getElementsByName('data-delete')[0];
 var result = document.getElementById('result');
 
 var actualOperation = '';
@@ -9,27 +9,27 @@ var previousOperation = '';
 var operation = undefined;
 
 
-buttomNumber.forEach(function(buttom){
-    buttom.addEventListener('click', function(){
-        addNumber(buttom.innerText);
+buttonNumber.forEach(function(button){
+    button.addEventListener('click', function(){
+        addNumber(button.innerText);
     })
 });
 
- buttomOperation.forEach(function(buttom){
-    buttom.addEventListener('click', function(){
-        selectOperation(buttom.innerText);
+buttonOperation.forEach(function(button){
+    button.addEventListener('click', function(){
+        selectOperation(button.innerText);
     })
- });
+});
 
- buttomEqual.addEventListener('click', function(){ 
+buttonEqual.addEventListener('click', function(){ 
     calculate();
-     refreshDisplay();
- });
+    refreshDisplay();
+});
 
- buttomDelete.addEventListener('click', function(){
+buttonDelete.addEventListener('click', function(){
      clear();
      refreshDisplay();
- });
+});
 
  function selectOperation(op){
      if(actualOperation === '') return;
@@ -59,9 +59,15 @@ buttomNumber.forEach(function(buttom){
         case '/':
             calcula = previous / actual;
             break;
+        case '%':
+            calcula = previous % actual;
+            break;
         default:
             return;
      }
+     actualOperation = calcula,
+     operation = undefined;
+     previousOperation = '';
  }
 
  function addNumber(number){
