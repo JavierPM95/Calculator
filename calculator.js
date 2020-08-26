@@ -65,10 +65,10 @@ buttonDelete.addEventListener('click', function(){
         default:
             return;
      }
-     actualOperation = calcula,
+     actualOperation = calcula;
      operation = undefined;
      previousOperation = '';
- }
+    };
 
  function addNumber(number){
      actualOperation = actualOperation.toString() + number.toString();
