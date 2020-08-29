@@ -15,6 +15,8 @@ buttonNumber.forEach(function(button){
     })
 });
 
+
+
 buttonOperation.forEach(function(button){
     button.addEventListener('click', function(){
         selectOperation(button.innerText);
@@ -69,15 +71,20 @@ buttonDelete.addEventListener('click', function(){
      operation = undefined;
      previousOperation = '';
     };
+    
+function refreshDisplay(){
+    result.value = actualOperation;
+};
 
- function addNumber(number){
+function refreshNumber(){
+    calcula = ''
+};
+
+function addNumber(number){
      actualOperation = actualOperation.toString() + number.toString();
      refreshDisplay();
  };
 
- function refreshDisplay(){
-     result.value = actualOperation;
- };
 
 function clear(){
     actualOperation = '';
