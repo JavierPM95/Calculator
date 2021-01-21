@@ -4,4 +4,4 @@ Calculator coded with Javascript.
 
 ### First look
 ___
-<img src="githubSrc/Calulator.png">
+<img src="githubSrc/Calculator.png">
