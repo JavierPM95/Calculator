@@ -4,4 +4,4 @@ Calculator coded with Javascript.
 
 ### First look
 ___
-<img src="githubSrc/Bank-Login-React-2.png">
+<img src="githubSrc/Calulator.png">
